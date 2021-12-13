@@ -1,0 +1,97 @@
+.calendar-container {
+    margin: auto auto;
+    width: 350px;
+    box-shadow: 5px 5px 5px teal;
+}
+
+.calendar {
+    position: relative;
+    display: grid;
+    place-content: center;
+    border: teal solid 2px;
+    border-top: white solid 0px;
+    background: white;
+    grid-template-rows: repeat(6, 50px);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    
+    /* z-index: 2; */
+}
+
+.chosen {
+    border: teal solid 2px;
+}
+
+.calendar-week {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+}
+
+.calendar-entering {
+    transform: translateY(-300px);
+    /* opacity: 0; */
+}
+
+.calendar-entered {
+    transform: translateY(0px);
+    /* opacity: 1; */
+}
+
+.calendar-exiting {
+    transform: translateY(0px);
+    /* opacity: 1; */
+}
+
+.calendar-exited {
+    transform: translateY(-300px);
+    /* opacity: 0; */
+}
+
+.calendar-item {
+    /* position: relative; */
+    color: black;
+    background-color: white;
+    user-select: none;
+    cursor: pointer;
+    /* z-index: 1; */
+    /* border: 2px solid black; */
+    text-align: center;
+}
+
+.calendar-item:hover {
+    background-color: rgb(189, 189, 189);
+    transition: background-color 500ms ease-in-out;
+}
+
+.calendar-item.thisDay:hover {
+    color: black;
+    /* background-color: rgb(189, 189, 189); */
+    transition: color, background-color 500ms ease-in-out;
+}
+
+.calendar-item:nth-child(7n+1) {
+    border-left: teal solid 2px;
+}
+
+.calendar-item:nth-child(7n) {
+    border-right: teal solid 2px;
+}
+.dayAnotherMonth {
+    color: gray;
+}
+
+.thisDay {
+    background-color: teal;
+    color: white;
+}
+
+.thisDay.chosen {
+   border: black solid 2px;
+}
+/* .calendar-item:hover {
+    border-color: white;
+} */
+@keyframes itemHover{
+
+}

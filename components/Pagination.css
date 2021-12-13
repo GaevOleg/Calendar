@@ -1,0 +1,26 @@
+.page-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border: 2px solid teal;
+    z-index: 3;
+    background-color: white;
+    /* box-shadow: 5px 0px 5px -3px teal; */
+}
+
+.page-container-text {
+    /* font-family: 'Roboto'; */
+    font-weight: 700;
+    color: teal;
+    font-size: 26px;
+    margin-left: 20px;
+    text-shadow: 1px 1px teal;
+}
+
+
+.page-btns {
+    height: 60%;
+}
